@@ -6,7 +6,8 @@ package codes.mahamed.sparqljsonml;
  */
 public class App {
     public static void main(String[] args) {
-        Lexer lex = new Lexer("'''hello world''' + stuff");
+        // System.out.println("'''hello world''' + \\\"stuff'");
+        Lexer lex = new Lexer("'''hello world''' + \\\"stuff'");
         try {
             while (lex.hasNext()) {
                 System.out.println(lex.next());

@@ -52,11 +52,12 @@ public class Lexer {
     }
 
     private String isEscaped() {
-        // System.out.println("got in escaped");
+        
         if (text.charAt(currentIndex) == '\\') {
-            // System.out.println("is escaped");
+            String res = text.substring(currentIndex, currentIndex + 2);
+            // System.out.println("escaping: " +res +": " +currentIndex +": " + currentIndex +2);
             move(2);
-            return text.substring(currentIndex, currentIndex + 1);
+            return res;
         }
         return "";
     }
